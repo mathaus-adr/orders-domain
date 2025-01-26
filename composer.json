@@ -1,0 +1,15 @@
+{
+    "name": "mathaus/orders-microservice",
+    "description": "Business rule for application",
+
+    "require": {
+        "psr/log": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Orders\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false
+}
