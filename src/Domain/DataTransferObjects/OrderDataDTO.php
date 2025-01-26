@@ -17,17 +17,17 @@ readonly class OrderDataDTO
 
     /**
      * @param  array  $orderData  {
-     *   clientExternalId: string,
-     *   orderExternalId: string,
-     *   orderItemData: array
+     *   codigoCliente: string,
+     *   codigoPedido: string,
+     *   itens: array
      * }  $orderData
      */
     public function __construct(array $orderData)
     {
-        $this->clientExternalId = $orderData['clientExternalId'];
-        $this->orderExternalId = $orderData['orderExternalId'];
+        $this->clientExternalId = $orderData['codigoCliente'];
+        $this->orderExternalId = $orderData['codigoPedido'];
 
-        foreach ($orderData['orderItemData'] as $orderItemData) {
+        foreach ($orderData['itens'] as $orderItemData) {
             $this->orderItemData[] = new OrderItemDataDTO($orderItemData);
         }
     }
