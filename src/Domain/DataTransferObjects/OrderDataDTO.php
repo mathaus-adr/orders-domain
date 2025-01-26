@@ -26,10 +26,11 @@ readonly class OrderDataDTO
     {
         $this->clientExternalId = $orderData['codigoCliente'];
         $this->orderExternalId = $orderData['codigoPedido'];
-
+        $orderItensData = [];
         foreach ($orderData['itens'] as $orderItemData) {
-            $this->orderItemData[] = new OrderItemDataDTO($orderItemData);
+            $orderItemData[] = new OrderItemDataDTO($orderItemData);
         }
+        $this->orderItemData = $orderItensData;
     }
 
     public function getOrderTotal(): float
