@@ -2,17 +2,16 @@
 
 namespace Orders\Domain\Entities;
 
-final class Client extends BaseEntity
+use Orders\Domain\Traits\FillObjectData;
+
+final readonly class Client
 {
-    public function __construct(array $attributes)
-    {
-        parent::__construct($attributes);
+    use FillObjectData;
+    public function __construct(
+        array $attributes
+    ) {
+        $this->fill($attributes);
     }
 
-    public readonly int $id;
-    public readonly string $client_external_id;
-
-    public readonly string $created_at;
-
-    public readonly string $updated_at;
+//
 }
