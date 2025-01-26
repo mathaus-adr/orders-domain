@@ -4,7 +4,7 @@ namespace Orders\Domain\Traits;
 
 trait FillObjectData
 {
-    private function fill(array $attributes): void
+    public function fill(array $attributes): void
     {
         $filteredAttributes = array_filter($attributes, function ($key) {
             return property_exists($this, $key);
