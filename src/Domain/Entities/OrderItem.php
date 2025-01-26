@@ -2,10 +2,10 @@
 
 namespace Orders\Domain\Entities;
 
-final class OrderItem extends BaseEntity
+final readonly class OrderItem
 {
-    public readonly int $id;
-    public readonly string $name;
-    public readonly string $created_at;
-    public readonly string $updated_at;
+    public int $id;
+    public string $name;
+    public string $created_at;
+    public string $updated_at;
 }

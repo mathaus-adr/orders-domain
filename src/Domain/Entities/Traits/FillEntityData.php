@@ -1,9 +1,15 @@
 <?php
 
-namespace Orders\Domain\Traits;
+namespace Orders\Domain\Entities\Traits;
 
-trait FillObjectData
+trait FillEntityData
 {
+    public function __construct(
+        array $attributes
+    ) {
+        $this->fill($attributes);
+    }
+
     public function fill(array $attributes): void
     {
         $filteredAttributes = array_filter($attributes, function ($key) {
