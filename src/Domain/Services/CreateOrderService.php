@@ -2,9 +2,9 @@
 
 namespace Orders\Domain\Services;
 
-use App\Model\Order;
 use Orders\Domain\DataTransferObjects\OrderDataDTO;
 use Orders\Domain\DataTransferObjects\OrderItemDataDTO;
+use Orders\Domain\Entities\Order;
 use Orders\Domain\Interfaces\Repositories\ClientRepositoryInterface;
 use Orders\Domain\Interfaces\Repositories\OrderItemRepositoryInterface;
 use Orders\Domain\Interfaces\Repositories\OrderRepositoryInterface;
