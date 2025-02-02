@@ -9,4 +9,6 @@ interface ClientRepositoryInterface
     public function find(string $clientExternalId): ?Client;
 
     public function create(string $clientExternalId): Client;
+
+    public function updateClientTotalOrders(Client $client): void;
 }

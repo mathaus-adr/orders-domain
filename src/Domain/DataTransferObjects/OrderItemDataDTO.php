@@ -2,7 +2,7 @@
 
 namespace Orders\Domain\DataTransferObjects;
 
-class OrderItemDataDTO
+readonly class OrderItemDataDTO
 {
     public string $sku;
 

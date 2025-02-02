@@ -44,6 +44,8 @@ readonly class CreateOrderService
             ]);
         }
 
+        $this->clientRepository->updateClientTotalOrders($client);
+
         return $order;
     }
 }
