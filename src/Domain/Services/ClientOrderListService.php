@@ -14,15 +14,10 @@ readonly class ClientOrderListService
     }
 
     public function execute(
-        string $externalClientId,
-        int $itemsPerPage = 10,
-        int $currentPage = 1
-    ): EntityPaginatedCollection {
+        string $externalClientId
+    ) {
         return $this->orderRepository->getOrderListPaginatedByExternalClientId(
-            externalClientId: $externalClientId,
-            itemsPerPage: $itemsPerPage,
-            currentPage: $currentPage
+            externalClientId: $externalClientId
         );
     }
-
 }
