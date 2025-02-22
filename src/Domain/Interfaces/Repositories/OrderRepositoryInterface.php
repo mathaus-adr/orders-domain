@@ -11,4 +11,6 @@ interface OrderRepositoryInterface
     public function create(Client $client, OrderDataDTO $orderDataDTO): Order;
 
     public function getOrderListPaginatedByExternalClientId(string $externalClientId);
+
+    public function getOrderListByParam(string $externalOrderId = null, string $externalClientId = null);
 }
